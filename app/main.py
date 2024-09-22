@@ -20,7 +20,6 @@ def main():
     parser.add_argument('--environment', 
                         type=str, 
                         choices=['local', 'cloud'], 
-                        required=True,
                         default='cloud',
                         help='Specify the environment: "local" or "cloud".')
     args = parser.parse_args()
