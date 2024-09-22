@@ -4,6 +4,41 @@ WhisperMesh is your cutting-edge chatbot that seamlessly blends voice and text i
 Harnessing the RAG framework from Haystack, our app excels in extracting relevant information, ensuring that every interaction is not only engaging but also data-driven. Whether you prefer speaking or typing, WhisperMesh adapts to your style, transforming your input into insightful answers with a personal touch.
 
 Join the conversation with WhisperMesh, where your voice matters, and let us guide you through a world of knowledge and discovery! 🌟💬✨
+# 🎯 Key Features of WhisperMesh
+
+### 1. Seamless Voice and Text Interactions
+WhisperMesh offers a cutting-edge conversational experience by blending voice and text inputs, allowing you to communicate in the way that suits you best.
+
+### 2. Advanced LLM Integration
+Powered by state-of-the-art large language models (LLMs), WhisperMesh understands your needs deeply and provides tailored responses that resonate with your queries.
+
+###  3. Intelligent Vector Database
+Utilizing *Qdrant* as our vector database, WhisperMesh efficiently manages and retrieves relevant information, ensuring data-driven interactions that enhance user engagement.
+
+###  4. Cohere Embedding Model
+Our application harnesses the Cohere embedding model for effective semantic understanding, ensuring that every interaction is insightful and contextually aware.
+
+### 5. Robust Speech-to-Text Capabilities
+With the *Whisper-large-v3* model from Groq Cloud, WhisperMesh excels at converting speech to text, making voice interactions smooth and accurate.
+
+### 6. Generative Model for Personalized Responses
+Employing the *Mixtral-8x7b* model from Groq Cloud, our app generates personalized responses, adding a unique touch to every conversation.
+ 
+### 7. RAG Framework for Data-Driven Insights
+Harnessing the RAG (Retrieval-Augmented Generation) framework from *Haystack*, WhisperMesh excels in extracting relevant information, ensuring that your interactions are engaging and informative.
+
+# 🛠️ How it Works
+### 📄 Step 1: Upload Your PDF Documents and Index Them
+- **Upload Options:** Drag and drop your files or click on **'Browse Files'** to select them. (Maximum file size: **200MB**).
+- **Start Indexing:** Click the **'📄 Index Document'** button to initiate the indexing process.
+
+### ⚙️ Step 2: Choose Your Chat Method
+- Decide whether you prefer to chat via **text** or **voice**.
+
+### 💬 Step 3: Ask Your Questions
+- **Text Input:** Use the text box below to type your question. 📝
+- **Voice Input:** Click the **🎙️ microphone icon** to ask questions using your voice.
+![Example Image](app guideline.png)
 
 # 🚀 Getting Started
 ### Prerequisites
@@ -84,8 +119,8 @@ Streamlit Cloud will:
 * Configurable: Separate configuration files for local and cloud deployment.
 * Docker Support: Deploy the app using Docker for local containerization.
 
-# 🤝 Contributing
-We welcome contributions! Please see our CONTRIBUTING.md for guidelines.
+# ✨ Show Your Support!
+If you appreciate this project, we would be grateful if you could give it a star on GitHub. Your support motivates us to enhance and expand our work!
 
 # 📄 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
