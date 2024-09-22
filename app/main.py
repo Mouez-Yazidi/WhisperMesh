@@ -91,7 +91,7 @@ def main():
                 </div>
                 """, unsafe_allow_html=True)
         st.subheader("Upload your PDF files and start interacting with the chatbot 🤖.")
-        #st.image('assets/indexing.png')
+        st.image('https://cdn-icons-png.flaticon.com/512/2037/2037149.png')
         uploaded_files = st.file_uploader("### 🗂️ Upload PDF files", type="pdf", accept_multiple_files=True)
         if st.button('📄 Index Documents'):
             if uploaded_files is not None:
