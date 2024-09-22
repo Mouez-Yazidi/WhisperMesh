@@ -14,20 +14,33 @@ Join the conversation with WhisperMesh, where your voice matters, and let us gui
 # 💻 Local Deployment
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/my-streamlit-app.git
-cd my-streamlit-app
+git clone https://github.com/Mouez-Yazidi/WhisperMesh.git
+cd WhisperMesh
 ```
-### 2. Install Dependencies
+### 2. Add Environment Variables
+
+* Create a `.env` file and add the following variables according to the credentials you obtained from the required platforms:
+
+    ```plaintext
+    COHERE_API_KEY=
+    GROQ_API=
+    GROQ_KEY=
+    QDRANT_API=
+    QDRANT_KEY=
+    ```
+    
+### 3. Install Dependencies
 Navigate to the local directory and install the necessary dependencies:
 ```bash
 cd local
 pip install -r requirements.txt
 ```
-### 3. Running the App Locally
+
+### 4. Running the App Locally
 To run the app locally, execute the following command:
 
 ```bash
-streamlit run ../app/main.py --config config.toml
+streamlit run ../app/main.py --environment local
 ```
 You should now be able to access the app at http://localhost:8501 🌐.
 
@@ -36,11 +49,11 @@ If you prefer running the app in a Docker container, follow these steps:
 1. Make sure you have Docker installed 🐋.
 2. Build the Docker image:
 ```bash
-docker build -t my-streamlit-app .
+docker build -t WhisperMesh .
 ```
 3. Run the container:
 ```bash
-docker run -p 8501:8501 my-streamlit-app
+docker run -p 8501:8501 WhisperMesh
 ```
 # ☁️ Streamlit Cloud Deployment
 ### 1. Prepare Your Repository
@@ -50,19 +63,21 @@ Ensure that your code is pushed to a GitHub repository 📂.
 * Visit Streamlit Cloud and sign in.
 * Connect your GitHub repository 🔗.
 * Choose your repository and branch.
-### 3. Streamlit Cloud Configuration
-Your *cloud/setup.sh* and *cloud/config.toml* will be used by Streamlit Cloud automatically to set up the environment.
 
+### 3. Environment Variables
+* Go to the "Advanced settings" section of your app.
+* In the "Secrets" section, input any sensitive information, such as API keys or other credentials.
+* Make sure to add this variables according to the credentials you obtained from the required platforms.
+```csharp
+COHERE_API_KEY=""
+GROQ_API=""
+GROQ_KEY=""
+QDRANT_API=""
+QDRANT_KEY=""
+```
 Streamlit Cloud will:
 * Install dependencies from cloud/requirements.txt 📦
-* Use cloud/config.toml for configuration ⚙️
-### 4. Environment Variables
-Add any sensitive information (API keys, secrets) to the cloud/secrets.toml file. For example:
 
-```csharp
-[api_keys]
-example_api_key = "your-api-key"
-```
 🎉 You’re all set! Your app will now be live on Streamlit Cloud!
 
 # 🌟 Features
