@@ -6,7 +6,6 @@ import os
 import streamlit as st
 from audio_recorder_streamlit import audio_recorder
 from gtts import gTTS
-from dotenv import load_dotenv
 from utils import (document_store_init, 
 indexing_pipeline_builder,
 retriever_pipeline_builder,
@@ -34,6 +33,7 @@ def main():
         qdrant_api = st.secrets["QDRANT_API"]
         qdrant_key = st.secrets["QDRANT_KEY"]
     else:
+        from dotenv import load_dotenv
         load_dotenv()
         # Access secret values
         cohere_api_key = os.getenv("COHERE_API_KEY")
