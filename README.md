@@ -4,7 +4,10 @@ WhisperMesh is your cutting-edge chatbot that seamlessly blends voice and text i
 Harnessing the RAG framework from Haystack, our app excels in extracting relevant information, ensuring that every interaction is not only engaging but also data-driven. Whether you prefer speaking or typing, WhisperMesh adapts to your style, transforming your input into insightful answers with a personal touch.
 
 Join the conversation with WhisperMesh, where your voice matters, and let us guide you through a world of knowledge and discovery! 🌟💬✨
-# 🎯 Key Features of WhisperMesh
+
+# 💻 Technical architecture
+
+# 🎯 Key Features
 
 ### 1. Seamless Voice and Text Interactions
 WhisperMesh offers a cutting-edge conversational experience by blending voice and text inputs, allowing you to communicate in the way that suits you best.
