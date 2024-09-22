@@ -79,17 +79,16 @@ def main():
             st.markdown("""
                 <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px;">
                 
-                ### 📄 Step 1: Upload your PDF Documents
-                - Drag and drop your files or click 'Browse Files' to select them.
-                - The maximum file size is 200MB.
+                ### 📄 Step 1: Upload Your PDF Documents and Index Them
+                - **Upload Options:** Drag and drop your files or click on **'Browse Files'** to select them. (Maximum file size: **200MB**).
+                - **Start Indexing:** Click the **'📄 Index Document'** button to initiate the indexing process.
                 
-                ### ⚙️ Step 2: Index your Documents
-                - Click the '📄 Index Document' button to start the indexing process.
-                - The bot will use these documents to answer your questions.
-        
-                ### 💬 Step 3: Ask your Questions
-                - Use the text box below to type your question. 📝
-                - You can also click on the 🎙️ microphone icon to ask questions via voice input.
+                ### ⚙️ Step 2: Choose Your Chat Method
+                - Decide whether you prefer to chat via **text** or **voice**.
+                
+                ### 💬 Step 3: Ask Your Questions
+                - **Text Input:** Use the text box below to type your question. 📝
+                - **Voice Input:** Click the **🎙️ microphone icon** to ask questions using your voice.
                 </div>
                 """, unsafe_allow_html=True)
         st.subheader("Upload your PDF files and start interacting with the chatbot 🤖.")
