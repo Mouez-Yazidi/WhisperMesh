@@ -125,7 +125,7 @@ Streamlit Cloud will:
 * Docker Support: Deploy the app using Docker for local containerization.
 
 # ✨ Show Your Support!
-If you appreciate this project, we would be grateful if you could give it a star on GitHub. Your support motivates us to enhance and expand our work!
+If you appreciate this project, I would be grateful if you could give it a star on GitHub. Your support motivates us to enhance and expand our work!
 
 # 📄 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
