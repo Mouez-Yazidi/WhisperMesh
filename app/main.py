@@ -9,12 +9,10 @@ indexing_pipeline_builder,
 retriever_pipeline_builder,
 read_pdf,audio_transcriber,
 create_chat_message,
-auto_play_audio,
-add_responsive_css
+auto_play_audio
 )
 
 def main():
-    add_responsive_css()
     # Access secret values
     cohere_api_key = st.secrets["COHERE_API_KEY"]
     groq_api = st.secrets["GROQ_API"]
