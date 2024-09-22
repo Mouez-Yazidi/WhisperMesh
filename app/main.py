@@ -1,9 +1,12 @@
-import streamlit as st
-from audio_recorder_streamlit import audio_recorder
 import base64
 import tempfile
-from gtts import gTTS
+import argparse
 import io
+import os
+import streamlit as st
+from audio_recorder_streamlit import audio_recorder
+from gtts import gTTS
+from dotenv import load_dotenv
 from utils import (document_store_init, 
 indexing_pipeline_builder,
 retriever_pipeline_builder,
@@ -13,12 +16,31 @@ auto_play_audio
 )
 
 def main():
-    # Access secret values
-    cohere_api_key = st.secrets["COHERE_API_KEY"]
-    groq_api = st.secrets["GROQ_API"]
-    groq_key = st.secrets["GROQ_KEY"]
-    qdrant_api = st.secrets["QDRANT_API"]
-    qdrant_key = st.secrets["QDRANT_KEY"]
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description='Run the Streamlit app.')
+    parser.add_argument('--environment', 
+                        type=str, 
+                        choices=['local', 'cloud'], 
+                        required=True,
+                        default='cloud',
+                        help='Specify the environment: "local" or "cloud".')
+    args = parser.parse_args()
+    
+    if args.environment == 'cloud':
+        # Access secret values
+        cohere_api_key = st.secrets["COHERE_API_KEY"]
+        groq_api = st.secrets["GROQ_API"]
+        groq_key = st.secrets["GROQ_KEY"]
+        qdrant_api = st.secrets["QDRANT_API"]
+        qdrant_key = st.secrets["QDRANT_KEY"]
+    else:
+        load_dotenv()
+        # Access secret values
+        cohere_api_key = os.getenv("COHERE_API_KEY")
+        groq_api = os.getenv("GROQ_API")
+        groq_key = os.getenv("GROQ_KEY")
+        qdrant_api = os.getenv("QDRANT_API")
+        qdrant_key = os.getenv("QDRANT_KEY")        
 
     # Store secrets in session_state
     #cohere
@@ -43,7 +65,7 @@ def main():
                                                     cohere_key=st.session_state.cohere_api_key,
                                                     groq_api = st.session_state.groq_api,
                                                     groq_key=st.session_state.groq_key)
-    
+    # sidebar section
     with st.sidebar:
         # Toggle pop-up state
         if "show_instructions" not in st.session_state:
@@ -99,7 +121,8 @@ def main():
                 st.warning("Please upload the documents and provide the missing fields.", icon="⚠️")
     st.sidebar.markdown("<br><br>", unsafe_allow_html=True)
     st.sidebar.write("📧 [Email us](mailto:mouez.yazidi2016@gmail.com) | 👔 [LinkedIn](https://www.linkedin.com/in/yazidi-mouez-35ba88183/)")
-    
+
+    #Main page
     st.title("🎤 RAG Chatbot using Haystack")
 
     st.subheader("How would you like to chat today? 🗣️🎤 or 💬🖊️")
