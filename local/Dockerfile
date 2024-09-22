@@ -11,13 +11,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code
 COPY ../app /app
 
-# Copy the secrets file (if provided)
-ARG SECRETS_FILE=../local/secrets.toml
-COPY ${SECRETS_FILE} ./secrets.toml
+# Copy the environment file into the container
+COPY ../env /app/.env
 
 # Expose the port Streamlit runs on
 EXPOSE 8501
 
 # Run the Streamlit app
-CMD ["streamlit", "run", "main.py"]
+CMD ["streamlit", "run", "main.py", "--environment", "local"]
 
