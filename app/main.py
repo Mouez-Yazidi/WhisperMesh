@@ -6,7 +6,7 @@ import os
 import streamlit as st
 from audio_recorder_streamlit import audio_recorder
 from gtts import gTTS
-from utils import (document_store_init, 
+from utils.utils import (document_store_init, 
 indexing_pipeline_builder,
 retriever_pipeline_builder,
 read_pdf,audio_transcriber,
