@@ -6,7 +6,8 @@ Harnessing the RAG framework from Haystack, our app excels in extracting relevan
 Join the conversation with WhisperMesh, where your voice matters, and let us guide you through a world of knowledge and discovery! 🌟💬✨
 
 # 💻 Technical architecture
-
+The architecture outlines a Streamlit application integrated with the HayStack framework to facilitate document uploading, querying, and response generation. Users upload PDF documents through the app, which are then processed and indexed by HayStack components, including document cleaners, splitters, and embedders that convert documents into vector representations using the Cohere model, stored in the Qdrant vector database. When a user submits a voice query, it is transcribed to text, embedded into a vector, and matched against the stored document vectors to retrieve relevant chunks. These chunks are fed into the Mistral 7B generative model to generate a coherent response, which is then converted back to audio for user output. This system leverages advanced NLP techniques to ensure efficient and accurate document retrieval and response generation.
+![Example Image](technical_architecture.png)
 # 🎯 Key Features
 
 ### 1. Seamless Voice and Text Interactions
