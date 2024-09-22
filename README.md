@@ -38,7 +38,8 @@ Harnessing the RAG (Retrieval-Augmented Generation) framework from *Haystack*, W
 ### 💬 Step 3: Ask Your Questions
 - **Text Input:** Use the text box below to type your question. 📝
 - **Voice Input:** Click the **🎙️ microphone icon** to ask questions using your voice.
-![Example Image](app guideline.png)
+
+![Example Image](app_guideline.png)
 
 # 🚀 Getting Started
 ### Prerequisites
