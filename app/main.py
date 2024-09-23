@@ -121,7 +121,7 @@ def main():
     st.sidebar.write("📧 [Email us](mailto:mouez.yazidi2016@gmail.com) | 👔 [LinkedIn](https://www.linkedin.com/in/yazidi-mouez-35ba88183/)")
 
     #Main page
-    st.title("🎤 RAG Chatbot using Haystack")
+    st.title("WhisperMesh 🌐🔊")
 
     st.subheader("How would you like to chat today? 🗣️🎤 or 💬🖊️")
     option = st.selectbox("",["Text 💬", "Voice 🎤"])
