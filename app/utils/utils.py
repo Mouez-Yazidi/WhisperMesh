@@ -103,7 +103,6 @@ def retriever_pipeline_builder(document_store:QdrantDocumentStore, cohere_key:st
     {% endfor %}
     
     \nQuestion: {{ question }}?
-    \nAnswer:
     """
 
     prompt_builder = PromptBuilder(template=template)
