@@ -74,7 +74,7 @@ def retriever_pipeline_builder(document_store:QdrantDocumentStore, cohere_key:st
     Guidelines:
         * Greetings: If the input is a greeting, respond with a brief, friendly message, such as: "Hello! How can I assist you today?"
         * No Documents Available: If no documents are provided or they are empty, respond with: "I don't have the necessary information to answer your question."
-        * Token Limit for Greetings/No Documents: Keep your response under 30 tokens if no documents are available or if the input is a greeting.
+        * Token Limit for Greetings/No Documents/ general question: Keep your response under 30 tokens if no documents are available or if the input is a greeting or the question is not explicitly covered by the documents.
         * Document-Based Answers: For questions, base your response only on the content from the provided documents. Avoid using any external knowledge. If the question is not explicitly covered by the documents, respond with: "I don't have the information."
         * Insufficient Information: If the documents don't contain the necessary information to answer the question, respond with: "I don't have the information."
 
