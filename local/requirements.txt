@@ -1,8 +1,0 @@
-streamlit
-audio-recorder-streamlit
-haystack-ai
-pypdf
-qdrant-haystack
-cohere-haystack
-gTTS
-python-dotenv
