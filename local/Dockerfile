@@ -5,7 +5,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copy the requirements file and install dependencies
-COPY requirements.txt .
+COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
@@ -18,5 +18,5 @@ COPY ../env /app/.env
 EXPOSE 8501
 
 # Run the Streamlit app
-CMD ["streamlit", "run", "main.py", "--environment", "local"]
+CMD ["streamlit", "run", "main.py"]
 

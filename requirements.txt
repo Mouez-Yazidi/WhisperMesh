@@ -5,3 +5,4 @@ pypdf
 qdrant-haystack
 cohere-haystack
 gTTS
+python-dotenv
