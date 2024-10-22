@@ -89,11 +89,11 @@ If you prefer running the app in a Docker container, follow these steps:
 1. Make sure you have Docker installed 🐋.
 2. Build the Docker image:
 ```bash
-docker build -t WhisperMesh .
+docker build -t whispermesh -f Dockerfile  ..
 ```
 3. Run the container:
 ```bash
-docker run -p 8501:8501 WhisperMesh
+docker run -p 8501:8501 whispermesh streamlit run main.py -- --environment local
 ```
 # ☁️ Streamlit Cloud Deployment
 ### 1. Prepare Your Repository
