@@ -93,7 +93,7 @@ docker build -t whispermesh -f Dockerfile  ..
 ```
 3. Run the container:
 ```bash
-docker run -p 8501:8501 whispermesh streamlit run main.py -- --environment local
+docker run -p 8501:8501 whispermesh streamlit run main.py --environment local
 ```
 # ☁️ Streamlit Cloud Deployment
 ### 1. Prepare Your Repository
