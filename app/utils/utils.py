@@ -56,12 +56,16 @@ def indexing_pipeline_builder(document_store: QdrantDocumentStore, cohere_key) -
     indexing_pipeline.connect("embedder", "writer")
     return indexing_pipeline
 
-def retriever_pipeline_builder(document_store:QdrantDocumentStore, cohere_key:str, groq_api:str, groq_key:str) -> Pipeline:
+def retriever_pipeline_builder(document_store:QdrantDocumentStore, 
+                               cohere_key:str, 
+                               groq_api:str, 
+                               groq_key:str
+                               model_name: str) -> Pipeline:
 
     llm = OpenAIGenerator(
         api_key=Secret.from_token(groq_key),
         api_base_url=groq_api,
-        model="deepseek-r1-distill-llama-70b",
+        model=model_name,
         generation_kwargs = {"max_tokens": 1024,
                             "temperature": 0}
     )
