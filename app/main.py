@@ -62,7 +62,7 @@ def main():
     # choose llm model 
     model_name = st.radio(
     "Choose your LLM model: ",
-    ["***deepseek-r1-distill-llama-70b***", "***gemma2-9b-it***", "***llama-3.3-70b-versatile***"]
+    ["deepseek-r1-distill-llama-70b", "gemma2-9b-it", "llama-3.3-70b-versatile"]
 )
     
     #retriever_pipeline
