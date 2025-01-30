@@ -61,7 +61,7 @@ def retriever_pipeline_builder(document_store:QdrantDocumentStore, cohere_key:st
     llm = OpenAIGenerator(
         api_key=Secret.from_token(groq_key),
         api_base_url=groq_api,
-        model="gemma-7b-it",
+        model="deepseek-r1-distill-llama-70b",
         generation_kwargs = {"max_tokens": 512,
                             "temperature": 0}
     )
