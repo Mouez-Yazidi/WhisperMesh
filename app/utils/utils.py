@@ -62,7 +62,7 @@ def retriever_pipeline_builder(document_store:QdrantDocumentStore, cohere_key:st
         api_key=Secret.from_token(groq_key),
         api_base_url=groq_api,
         model="deepseek-r1-distill-llama-70b",
-        generation_kwargs = {"max_tokens": 512,
+        generation_kwargs = {"max_tokens": 1024,
                             "temperature": 0}
     )
 
