@@ -59,12 +59,18 @@ def main():
     #initialize document store
     document_store = document_store_init(api_key=qdrant_key, url=qdrant_api)
 
+    # choose llm model 
+    model_name = st.radio(
+    "Choose your LLM model: ",
+    ["***deepseek-r1-distill-llama-70b***", "***gemma2-9b-it***", "***llama-3.3-70b-versatile***"]
+)
+    
     #retriever_pipeline
     retriever_pipeline = retriever_pipeline_builder(document_store=document_store, 
                                                     cohere_key=st.session_state.cohere_api_key,
                                                     groq_api = st.session_state.groq_api,
                                                     groq_key=st.session_state.groq_key,
-                                                    model_name = "deepseek-r1-distill-llama-70b")
+                                                    model_name = model_name)
     # sidebar section
     with st.sidebar:
         # Toggle pop-up state
