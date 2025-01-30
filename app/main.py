@@ -63,7 +63,8 @@ def main():
     retriever_pipeline = retriever_pipeline_builder(document_store=document_store, 
                                                     cohere_key=st.session_state.cohere_api_key,
                                                     groq_api = st.session_state.groq_api,
-                                                    groq_key=st.session_state.groq_key)
+                                                    groq_key=st.session_state.groq_key,
+                                                    model_name = "deepseek-r1-distill-llama-70b")
     # sidebar section
     with st.sidebar:
         # Toggle pop-up state
