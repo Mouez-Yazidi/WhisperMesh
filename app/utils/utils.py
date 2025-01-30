@@ -59,7 +59,7 @@ def indexing_pipeline_builder(document_store: QdrantDocumentStore, cohere_key) -
 def retriever_pipeline_builder(document_store:QdrantDocumentStore, 
                                cohere_key:str, 
                                groq_api:str, 
-                               groq_key:str
+                               groq_key:str,
                                model_name: str) -> Pipeline:
 
     llm = OpenAIGenerator(
